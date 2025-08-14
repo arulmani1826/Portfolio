@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Certificates</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2e026d, #0077b6, #ff6f61);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .header {
+      display: flex;
+      justify-content: flex-end; /* Home button to right */
+      align-items: center;
+      padding: 15px 50px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .navbar a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.2s ease;
+      background: #03abde;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+    .navbar a:hover {
+      background: #04c0ff;
+      transform: scale(1.05);
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .glass-box {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    /* Glow effect on mouse move */
+    .glass-box:hover {
+      box-shadow: 0 8px 25px rgba(10, 242, 254, 0.6);
+      transform: translateY(-3px);
+    }
+
+    h2 {
+      color: #00d2ed;
+      margin-bottom: 15px;
+    }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .mini-card {
+      padding: 15px;
+      border-radius: 12px;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .mini-card:hover {
+      box-shadow: 0 6px 15px rgba(1, 180, 224, 0.6);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="free.html">Home</a>
+      <a href="free.html">Contact Me</a>
+    </nav>
+  </header>
+
+  <!-- About Me -->
+  <section id="about" class="section">
+    <div class="glass-box">
+      <h2>About Me</h2>
+      <p>
+I am Arulmani, an enthusiastic and detail-oriented aspiring software engineer with a passion for building impactful, user-focused solutions. 
+I have hands-on experience in programming, cloud computing, and machine learning, and I enjoy solving real-world problems through innovative technology. 
+My expertise spans across languages like Python and Java, frameworks such as Streamlit, and tools like AWS and GitHub. 
+Beyond technical skills, I am a quick learner, collaborative team player, and constantly seek opportunities to expand my knowledge. 
+My goal is to contribute to meaningful projects that challenge my abilities and create value for both users and organizations.
+</p>
+
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="section">
+    <div class="glass-box">
+      <h2>Certificates</h2>
+      <div class="mini-grid">
+        <a href="https://simpli-web.app.link/e/nIuaSfRcMVb">
+        <div class="mini-card">
+          
+          <h3>Java for Beginners</h3>
+          <p>OOP concepts, data structures, and application development.</p>
+        </div>
+        </a>
+        <a href="https://simpli-web.app.link/e/DNgB3YKdMVb">
+        <div class="mini-card">
+          <h3>Basics of Cloud Computing</h3>
+          <p>Core concepts, deployment models, AWS practice.</p>
+        </div>
+        </a>
+        <a href="https://courses.cognitiveclass.ai/certificates/43710a619e034fd6a800d8f3ada18330">
+        <div class="mini-card">
+          <h3>Python Basics</h3>
+          <p>Syntax, control structures, scripting, and data processing.</p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

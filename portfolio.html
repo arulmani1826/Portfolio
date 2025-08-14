@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arulmani | Portfolio</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2e026d, #0077b6, #06d6a0);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Header */
+    .header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 50px; background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .logo {
+  font-weight: 600;
+  font-size: 1.4em;
+  color: #5eead4;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between logo and text */
+}
+
+.logo img {
+  width: 35px;  /* smaller logo size */
+  height: 35px; /* keep it square */
+  object-fit: cover;   /* fill the circle */
+  border-radius: 50%;  /* makes it circular */
+  border: 2px solid #5eead4;
+}
+
+    .navbar a {
+      margin-left: 20px; text-decoration: none; color: #4cc9f0; font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover { color: #5eead4; }
+
+    /* Hero */
+    .hero { padding: 100px 20px; text-align: center; }
+    .hero h1 { font-size: 2.5em; color: #5eead4; }
+    .hero p { max-width: 600px; margin: 10px auto 20px; font-size: 1.2em; color: #bde0fe; }
+    .btn {
+      background: #4cc9f0; color: white; padding: 12px 25px; border-radius: 25px;
+      text-decoration: none; transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .btn:hover { background: #3ab1d6; transform: scale(1.05); }
+
+    /* Section */
+    .section { padding: 60px 20px; }
+    .container { max-width: 1000px; margin: auto; }
+
+    /* Glass Box */
+    .glass-box {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 15px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .glass-box:hover {
+      box-shadow: 0 8px 25px rgba(76, 201, 240, 0.6);
+      transform: translateY(-5px);
+    }
+
+    /* Headings */
+    h2 { color: #4cc9f0; margin-bottom: 15px; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    .mini-card {
+      padding: 15px;
+      border-radius: 12px;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .mini-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 6px 15px rgba(94, 234, 212, 0.6);
+    }
+
+    /* Projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 6px 15px rgba(76, 201, 240, 0.6);
+    }
+
+    /* Footer (Contact Left) */
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align to left */
+      text-align: left;
+      padding: 30px 50px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+      margin-top: 40px;
+    }
+    footer h2 {
+      margin-bottom: 15px;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+    footer a {
+      color: #4cc9f0;
+      text-decoration: none;
+      margin: 0 10px 0 0;
+      transition: color 0.3s ease;
+    }
+    footer a:hover { color: #5eead4; }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    
+    <div class="logo"><img src="aru.jpeg" alt="DBL Solutions Logo">Hello, I'm Arulmani</div>
+    <nav class="navbar">
+      <a href="#Home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="Home" class="hero fade-in">
+    <h1>Hello, I'm Arulmani</h1>
+    <p>Innovating with Code & Cloud</p>
+    <p>Cloud Engineer · Python Developer · Web Developer</p>
+    <a href="about.html" class="btn">Explore My Journey</a>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section fade-in">
+    <div class="container glass-box">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="mini-card"><h3>Java</h3><p>Backend development, OOP, Spring Boot.</p></div>
+        <div class="mini-card"><h3>C</h3><p>System-level programming, algorithms, data structures.</p></div>
+        <div class="mini-card"><h3>Python</h3><p>Automation, machine learning, Flask/Django.</p></div>
+        <div class="mini-card"><h3>HTML</h3><p>Semantic, accessible, and SEO-friendly structure.</p></div>
+        <div class="mini-card"><h3>CSS</h3><p>Responsive, animated, and modern web design.</p></div>
+        <div class="mini-card"><h3>SQL</h3><p>Database design, queries, and optimization.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section fade-in">
+    <div class="container glass-box">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <a href="https://github.com/arulmani1826/spp_tsa.git">
+          <div class="project-card"><h3>Stock Price Predictions</h3><p>Machine learning model to predict stock market trends using Python, Pandas, and Scikit-learn.</p></div>
+        </a>
+        <div class="project-card"><h3>IoT Voice Assistant</h3><p>Voice-controlled IoT system for home automation using Raspberry Pi and speech recognition.</p></div>
+        <a href="https://github.com/arulmani1826/telecomchurnpredict.git">
+          <div class="project-card"><h3>Telecom Churn Prediction</h3><p>Data analysis and predictive modeling to reduce customer churn in telecom industry.</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <h2>Contact Me</h2>
+    <p>📧 Gmail ID:<a href="mailto:usharanivelmurugan2006@gmail.com">usharanivelmurugan2006@gmail.com</a></p>
+    <p>🔗 LinkedIn:<a href="https://www.linkedin.com/in/arulmani-v-519061292" target="_blank">https://www.linkedin.com/in/arulmani-v-519061292</a></p>
+    <p>💻 GitHub:<a href="https://github.com/arulmani1826" target="_blank">https://github.com/arulmani1826</a></p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver(function(entries, obs) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+    faders.forEach(fader => { appearOnScroll.observe(fader); });
+  </script>
+</body>
+</html>
